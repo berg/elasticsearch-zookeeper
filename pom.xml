@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sonian</groupId>
     <artifactId>elasticsearch-zookeeper</artifactId>
-    <version>1.4.2</version>
+    <version>1.4.3</version>
     <packaging>jar</packaging>
     <description>ZooKeeper plugin for Elasticsearch</description>
     <inceptionYear>2011</inceptionYear>
@@ -30,7 +30,7 @@
     </parent>
 
     <properties>
-        <elasticsearch.version>1.4.2</elasticsearch.version>
+        <elasticsearch.version>1.4.3</elasticsearch.version>
         <zookeeper.version>3.4.6</zookeeper.version>
     </properties>
 
@@ -109,6 +109,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.11</version>
                 <configuration>
+                    <argLine>-Xms256m -Xmx512m</argLine>
                     <includes>
                         <include>**/*Tests.java</include>
                     </includes>
